@@ -1,0 +1,57 @@
+[
+  {
+    "id": "session-simple-greeting",
+    "messages": [
+      {"role": "system", "content": "You are a helpful assistant."},
+      {"role": "user", "content": "Hi! What is your name?"},
+      {"role": "assistant", "content": "I'm an AI assistant. How can I help you today?"},
+      {"role": "user", "content": "What is 2 + 2?"},
+      {"role": "assistant", "content": "2 + 2 equals 4."},
+      {"role": "user", "content": "Great, thanks!"}
+    ]
+  },
+  {
+    "id": "session-coding-basics",
+    "messages": [
+      {"role": "system", "content": "You are an expert Python programming tutor."},
+      {"role": "user", "content": "What is a Python list?"},
+      {"role": "assistant", "content": "A Python list is an ordered, mutable collection of items enclosed in square brackets, e.g. [1, 2, 3]."},
+      {"role": "user", "content": "How do I append to a list?"},
+      {"role": "assistant", "content": "Use the append() method: my_list.append(item)."},
+      {"role": "user", "content": "What is the difference between a list and a tuple?"},
+      {"role": "assistant", "content": "Lists are mutable (you can change them); tuples are immutable (you cannot change them after creation)."},
+      {"role": "user", "content": "Can you show a code example comparing the two?"}
+    ]
+  },
+  {
+    "id": "session-complex-reasoning",
+    "messages": [
+      {"role": "system", "content": "You are a knowledgeable assistant with expertise in economics and policy."},
+      {"role": "user", "content": "What is monetary policy?"},
+      {"role": "assistant", "content": "Monetary policy refers to the actions taken by a central bank to control the money supply and interest rates to achieve macroeconomic goals."},
+      {"role": "user", "content": "How does raising interest rates affect inflation?"},
+      {"role": "assistant", "content": "Higher interest rates make borrowing more expensive, reducing consumer spending and business investment, which cools demand and tends to lower inflation."},
+      {"role": "user", "content": "Explain the trade-off between controlling inflation and unemployment, referencing the Phillips Curve and its modern critiques."}
+    ]
+  },
+  {
+    "id": "session-creative-writing",
+    "messages": [
+      {"role": "system", "content": "You are a creative writing assistant."},
+      {"role": "user", "content": "Write me a one-sentence story about a dragon."},
+      {"role": "assistant", "content": "The dragon, tired of hoarding gold, opened a bakery and became famous for her fire-roasted croissants."},
+      {"role": "user", "content": "Now write a full short story (300 words) continuing that premise, with a twist ending."}
+    ]
+  },
+  {
+    "id": "session-technical-deep-dive",
+    "messages": [
+      {"role": "system", "content": "You are a senior software architect."},
+      {"role": "user", "content": "What is the CAP theorem?"},
+      {"role": "assistant", "content": "The CAP theorem states that a distributed system can only guarantee two of three properties simultaneously: Consistency, Availability, and Partition Tolerance."},
+      {"role": "user", "content": "Give me an example of a CP system and an AP system."},
+      {"role": "assistant", "content": "HBase and Zookeeper are CP systems—they sacrifice availability during partitions to maintain consistency. Cassandra and DynamoDB are AP systems—they remain available during partitions but may return stale data."},
+      {"role": "user", "content": "Design a high-level architecture for a globally distributed e-commerce checkout system that must handle 100k transactions per second, explaining the consistency model you'd choose and why, considering payment processing constraints."}
+    ]
+  }
+]

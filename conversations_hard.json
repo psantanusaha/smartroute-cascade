@@ -1,0 +1,57 @@
+[
+  {
+    "id": "session-algorithms-tsp",
+    "messages": [
+      {"role": "system", "content": "You are an expert computer science tutor specialising in algorithms and data structures."},
+      {"role": "user", "content": "What is dynamic programming?"},
+      {"role": "assistant", "content": "Dynamic programming solves complex problems by breaking them into overlapping subproblems, caching results to avoid redundant computation (memoization or tabulation)."},
+      {"role": "user", "content": "Give a simple example."},
+      {"role": "assistant", "content": "Fibonacci: fib(n) = fib(n-1) + fib(n-2). Naive recursion is O(2^n); with memoization it's O(n)."},
+      {"role": "user", "content": "Implement a complete, correct Python solution for the Travelling Salesman Problem using the Held-Karp dynamic programming algorithm. Requirements: use bitmask DP with O(2^n * n^2) time and O(2^n * n) space, handle up to 20 cities, return both the minimum cost AND the actual optimal path (not just the cost), include path reconstruction from the DP table, and include 3 test cases with manually verified correct answers including a 4-city example where you show the full DP table."}
+    ]
+  },
+  {
+    "id": "session-clinical-reasoning",
+    "messages": [
+      {"role": "system", "content": "You are a medical education assistant helping medical students with clinical reasoning."},
+      {"role": "user", "content": "What is a differential diagnosis?"},
+      {"role": "assistant", "content": "A ranked list of conditions that could explain a patient's presentation, guiding further workup and treatment."},
+      {"role": "user", "content": "What are common causes of chest pain?"},
+      {"role": "assistant", "content": "ACS, pulmonary embolism, aortic dissection, pneumothorax, pericarditis, GERD, and musculoskeletal pain."},
+      {"role": "user", "content": "A 67-year-old diabetic male presents with 3 days of fatigue and mild dyspnoea, no chest pain. ECG shows new LBBB. Troponin I is 0.8 ng/mL (ref <0.04 ng/mL). He takes metformin, lisinopril, and warfarin (current INR 2.3). He has CKD stage 3b (eGFR 32 mL/min). Provide: (1) primary diagnosis with Sgarbossa criteria assessment and modified Sgarbossa score, (2) exact contraindications to thrombolysis in this patient listing each factor, (3) preferred reperfusion strategy with reasoning, (4) specific medication adjustments before PCI including exact dose changes for his CKD and warfarin status, (5) post-procedure monitoring parameters with specific target ranges."}
+    ]
+  },
+  {
+    "id": "session-quant-finance",
+    "messages": [
+      {"role": "system", "content": "You are a quantitative finance tutor."},
+      {"role": "user", "content": "What is an option in finance?"},
+      {"role": "assistant", "content": "A contract giving the buyer the right, but not obligation, to buy (call) or sell (put) an asset at a specified strike price before expiry."},
+      {"role": "user", "content": "What is the Black-Scholes formula?"},
+      {"role": "assistant", "content": "C = S*N(d1) - K*e^(-rT)*N(d2), where d1 = [ln(S/K) + (r + σ²/2)T] / (σ√T) and d2 = d1 - σ√T."},
+      {"role": "user", "content": "Implement a complete Python pricer for a discrete daily-monitored knock-out barrier call option using Monte Carlo. Requirements: (1) antithetic variates for variance reduction, (2) control variate using the analytical Black-Scholes vanilla call price, (3) 95% confidence interval on the price, (4) bump-and-reprice Delta and Gamma (with correct bump sizes), (5) a convergence table showing price and standard error at 1k, 5k, 10k, 50k, 100k paths. Use S=100, K=105, B=120 (barrier), r=0.05, sigma=0.2, T=1 year, 252 monitoring dates. Show the control variate regression coefficient beta and explain every modelling choice."}
+    ]
+  },
+  {
+    "id": "session-logic-puzzle",
+    "messages": [
+      {"role": "system", "content": "You are a logic puzzle expert who shows complete, step-by-step deduction."},
+      {"role": "user", "content": "What is a logic puzzle?"},
+      {"role": "assistant", "content": "A problem solvable purely through deductive reasoning from a set of clues, without requiring outside knowledge."},
+      {"role": "user", "content": "Give me a simple example."},
+      {"role": "assistant", "content": "Three houses in a row: red is left of blue, green is right of blue. Order: red, blue, green."},
+      {"role": "user", "content": "Solve this completely, showing every individual deduction step and the reasoning chain: Five people (Alice, Bob, Carol, Dave, Eve) each have a unique job (doctor, lawyer, teacher, engineer, chef), house colour (red, blue, green, yellow, white), position (1-5 left to right), pet (cat, dog, fish, bird, hamster), and drink (coffee, tea, milk, juice, water). Clues: 1) The doctor lives in the red house. 2) Alice owns a cat. 3) The milk drinker lives next to the bird owner. 4) The lawyer is in position 3. 5) Bob drinks coffee. 6) The green house is immediately right of the white house. 7) The engineer owns a dog. 8) The teacher drinks tea. 9) Carol is in position 1. 10) The yellow house person drinks juice. 11) Dave lives next to Eve. 12) The chef owns a fish. 13) Position 2 person owns a hamster. 14) Eve is not the lawyer. 15) The blue house is in position 5. At the end provide the complete solution grid."}
+    ]
+  },
+  {
+    "id": "session-collab-doc-design",
+    "messages": [
+      {"role": "system", "content": "You are a staff engineer at a large tech company conducting a system design interview."},
+      {"role": "user", "content": "What is horizontal scaling?"},
+      {"role": "assistant", "content": "Adding more machines to distribute load, as opposed to vertical scaling which adds more resources to a single machine."},
+      {"role": "user", "content": "What is consistent hashing?"},
+      {"role": "assistant", "content": "Maps both data and servers onto a ring so adding/removing a server migrates only the adjacent data segment, minimising redistribution."},
+      {"role": "user", "content": "Design a real-time collaborative document editor supporting 10 million concurrent users. Cover all of the following with quantified estimates: (1) choose between OT and CRDT for conflict resolution — justify with specific complexity trade-offs, (2) WebSocket infrastructure including exact connection counts per server, heartbeat design, and zero-downtime deployment with connection draining, (3) persistence layer with your chosen DB, schema, and how you handle optimistic locking under high write contention, (4) split-brain handling during network partition — which CAP trade-off you accept and why, (5) offline editing with sync-on-reconnect and conflict resolution, (6) sharding strategy for documents with hotspot mitigation. Show back-of-envelope capacity math throughout."}
+    ]
+  }
+]
