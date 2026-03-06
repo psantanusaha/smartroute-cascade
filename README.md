@@ -40,6 +40,10 @@ python analyze_skills.py
 
 ---
 
+## 📋 Prerequisites
+1. **API Keys**: See `.env.example`.
+2. **Environment**: `pip install -r requirements.txt`
+
 ## 📂 Dataset
 - `conversations.json`: 5 sessions of routine tasks (Easy).
 - `conversations_hard.json`: 5 sessions of complex boundary tasks (TSP, Quant-Finance, Clinical Reasoning).
